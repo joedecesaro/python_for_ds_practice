@@ -6,7 +6,7 @@ editor: visual
 
 # Chapter 2 Exercises
 
-The goal of this chapter is make someone more familiar with the basic data structures in python, which include lists, tuples, dictionaries, and sets. 
+The goal of this chapter is to make someone more familiar with the basic data structures in python, which include lists, tuples, dictionaries, and sets. 
 
 ```{python}
 #| label: Exercise 1 - Photo Tag Analysis
@@ -14,7 +14,7 @@ The goal of this chapter is make someone more familiar with the basic data struc
 photo_l = [
   {
 	  "name": "photo1.jpg",
-	  "tags": {'coffee', 'breakfast', 'drink', 'table', 'tableware', 'cup', 'food'}
+	  "tags": {'coffee', 'breakfast', 'drink', 'table', 'tableware', 'cup', 'food', 'vegetable'}
 	 },
 	 {
 	  "name": "photo2.jpg",

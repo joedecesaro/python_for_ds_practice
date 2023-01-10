@@ -1,0 +1,74 @@
+---
+title: "chapter_3"
+format: html
+editor: visual
+---
+
+# Chapter 3 Exercises
+
+This chapter introduces population python libraries: NumPy, pandas, and scikit-learn.
+
+
+## Exercise 2
+
+```{python}
+#| label: Exercise 2 - Using Numpy Statistical Functions
+import numpy as np
+
+jeff_salary = [2700, 3000, 3000]
+nick_salary = [2600, 2800, 2800]
+tom_salary = [2300, 2500, 2500]
+
+base_salary = np.array([jeff_salary, nick_salary, tom_salary])
+print(base_salary)
+
+```
+
+```{python}
+#| label: Exercise 2 - Using Numpy Statistical Functions
+
+jeff_bonus = [500, 400, 400]
+nick_bonus = [600, 300, 400]
+tom_bonus = [200, 500, 400]
+
+bonus = np.array([jeff_bonus, nick_bonus, tom_bonus])
+
+salary_bonus = base_salary + bonus
+
+print(type(salary_bonus))
+print(salary_bonus)
+```
+```{python}
+max_avg = np.amax(salary_bonus, axis = 0)
+
+print(round(np.average(max_avg), 2))
+```
+
+## Exercise 3
+
+```{python}
+#| label: Exercise 3 - Combining Series
+import pandas as pd
+data = ['Jeff Russell', 'Jane Boornman', 'Tom Heints']
+emps_names = pd.Series(data, index = [9001, 9002, 9003])
+emps_names.name = 'names'
+
+
+data = ['jeff.russell','jane.boorman','tom.heints']
+emps_emails = pd.Series(data,index=[9001,9002,9003], name = 'emails')
+
+data = ['+1 246 111-xxxx', '+1 246 222-xxxx','+1 246 333-xxxx',]
+emps_phones = pd.Series(data,index=[9001,9002,9003], name = 'phone_number')
+
+df = pd.concat([emps_names, emps_emails, emps_phones], axis = 1)
+print(df)
+
+```
+
+### Expanded pandas df section with yfinance
+
+```{python}
+import yfinance as yf
+tkr = yf.Ticker('TSLA')
+```
+
