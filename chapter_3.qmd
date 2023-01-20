@@ -4,10 +4,13 @@ format: html
 editor: visual
 ---
 
+```{r}
+
+```
+
 # Chapter 3 Exercises
 
 This chapter introduces population python libraries: NumPy, pandas, and scikit-learn.
-
 
 ## Exercise 2
 
@@ -38,6 +41,7 @@ salary_bonus = base_salary + bonus
 print(type(salary_bonus))
 print(salary_bonus)
 ```
+
 ```{python}
 max_avg = np.amax(salary_bonus, axis = 0)
 
@@ -71,4 +75,3 @@ print(df)
 import yfinance as yf
 tkr = yf.Ticker('TSLA')
 ```
-
